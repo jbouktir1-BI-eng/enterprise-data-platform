@@ -208,3 +208,30 @@ add_comment(EPIC, FINAL_GATE_COMMENT)
 print()
 print("TP0 JIRA GOVERNANCE: OK")
 print("TP0 GATE: CLOSED / VALIDATED")
+
+# Additional TP0 governance/documentation work
+EXTRA_SECONDS = 83 * 60  # 1h23
+
+WORKLOG_COMMENT = """TP0 additional engineering work:
+- Jira governance completion
+- Professional issue descriptions and comments
+- Root cause and troubleshooting documentation
+- Documentation automation
+- Git validation and security checks
+- CRLF troubleshooting and correction
+- Jira automation debugging
+- GitHub commits and push validation
+- Final TP0 engineering gate validation
+"""
+
+api(
+    "POST",
+    f"/rest/api/3/issue/{EPIC}/worklog",
+    json={
+        "timeSpentSeconds": EXTRA_SECONDS,
+        "comment": adf(WORKLOG_COMMENT),
+    },
+)
+
+print("ADDITIONAL WORKLOG: 1h23 OK")
+print("TP0 TOTAL: 4h55")
