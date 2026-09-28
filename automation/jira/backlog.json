@@ -1,0 +1,17 @@
+{
+  "project": "SCRUM",
+  "epics": [
+    {"week":1,"name":"Environment & DEV","hours":20,"priority":"Highest"},
+    {"week":2,"name":"Multi-Source Ingestion","hours":28,"priority":"Highest"},
+    {"week":3,"name":"Data Lake & Data Quality","hours":28,"priority":"High"},
+    {"week":4,"name":"PySpark Processing","hours":28,"priority":"High"},
+    {"week":5,"name":"BigQuery & Data Modeling","hours":28,"priority":"High"},
+    {"week":6,"name":"dbt Testing & Lineage","hours":26,"priority":"High"},
+    {"week":7,"name":"Airflow Orchestration","hours":28,"priority":"High"},
+    {"week":8,"name":"Dell-like Product Master","hours":26,"priority":"High"},
+    {"week":9,"name":"Power BI & Executive Cockpit","hours":28,"priority":"High"},
+    {"week":10,"name":"Data Science & Forecasting","hours":30,"priority":"High"},
+    {"week":11,"name":"PROD Security & Monitoring","hours":30,"priority":"Highest"},
+    {"week":12,"name":"Backup DR Migration & Portfolio","hours":28,"priority":"Highest"}
+  ]
+}
