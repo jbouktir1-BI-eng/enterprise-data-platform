@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Environment & secrets
+.env
+.env.*
+*.key
+*.pem
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Data
+data/raw/
+data/tmp/
+
+# Spark
+.sparkStaging/
+
+# Terraform
+.terraform/
+
+# dbt
+target/
+dbt_packages/
+logs/
+
+# Temporary files
+*.tmp
+*.bak
