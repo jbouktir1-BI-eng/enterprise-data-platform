@@ -38,3 +38,10 @@ logs/
 # Temporary files
 *.tmp
 *.bak
+
+# TP1 generated/runtime data
+data/raw/
+data/bronze/
+data/quarantine/
+data/metadata/
+data/source/
