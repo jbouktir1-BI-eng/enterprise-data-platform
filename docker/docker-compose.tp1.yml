@@ -1,0 +1,21 @@
+services:
+  postgres-source:
+    image: postgres:16
+    container_name: edp-postgres-source
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - tp1_postgres_data:/var/lib/postgresql/data
+      - ./postgres/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U edp_user -d enterprise_source"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  tp1_postgres_data:

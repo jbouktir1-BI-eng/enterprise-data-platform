@@ -1,0 +1,39 @@
+project:
+  name: enterprise-data-platform
+  environment: dev
+
+storage:
+  raw_path: data/raw
+  quarantine_path: data/quarantine
+  format: parquet
+
+ingestion:
+  api:
+    enabled: true
+    timeout_seconds: 30
+    retries: 3
+
+  files:
+    enabled: true
+    formats:
+      - csv
+      - json
+      - xlsx
+
+  postgres:
+    enabled: true
+
+metadata:
+  fields:
+    - source
+    - source_type
+    - run_id
+    - ingestion_timestamp
+    - record_count
+    - status
+
+portability:
+  current: WSL2 Ubuntu
+  targets:
+    - Ubuntu Server DEV
+    - Ubuntu Server PROD
